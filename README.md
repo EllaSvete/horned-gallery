@@ -99,3 +99,13 @@ Start time: 5:50
 Finish time: 6:50
 
 Actual time needed to complete: 1 hr
+
+Number and name of feature: ___Lab 3_Feature 1____________
+
+Estimate of time needed to complete: ___3 hrs__
+
+Start time: _3:15____
+
+Finish time: _____
+
+Actual time needed to complete: _____
