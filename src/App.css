@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+main {
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+
+#root {
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
