@@ -14,13 +14,20 @@ class HornedBeast extends React.Component {
         likes: this.state.likes + 1
       });
     };
+    handleShowModal = () => {
+      this.props.openModal(this.props.image_url, this.props.description);
+    }
     render() {
-      console.log(this.state);
       return (
         <article>
           <h2>{this.props.title}</h2>
           <p>{this.state.likes} 💚  Favorites</p>
-          <img src={this.props.image_url} alt={this.props.description} title={this.props.title} onClick={this.handleLikes}/>
+          <img 
+          onClick={this.handleShowModal}
+          src={this.props.image_url} 
+          alt={this.props.description} 
+          title={this.props.title} 
+          />
           <p>{this.props.description}</p>
           <p>Number of Horns: {this.props.horns}</p>
           <Button 

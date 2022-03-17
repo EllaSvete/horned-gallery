@@ -7,16 +7,17 @@ class Main extends React.Component {
 
   render() {
     console.log(this.props.data);
-    let beasts = [];
-    this.props.data.forEach((beast, index) => {
-      beasts.push(
+    let beasts = this.props.data.map((beast, index) => {
+      return(
         <HornedBeast
         title={beast.title}
         description={beast.description}
         image_url={beast.image_url}
         keyword={beast.keyword}
         horns={beast.horns}
-        key={index}
+        key={index} // index is good to use because siblings need unique indicators
+        // react catalogs what is being changed, if you need to change it, it has a index number so it knows how to refer to it. acts as a counter!
+        openModal={this.props.openModal}
         />
       )
     })
