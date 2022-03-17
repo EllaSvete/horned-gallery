@@ -106,6 +106,8 @@ Estimate of time needed to complete: ___3 hrs__
 
 Start time: _3:15____
 
-Finish time: _____
+Finish time: __6___
 
-Actual time needed to complete: _____
+Actual time needed to complete: __2.45hrs___
+
+I worked with Liesel closely on this lab. 
