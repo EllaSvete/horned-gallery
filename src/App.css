@@ -38,9 +38,24 @@
 }
 
 main {
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  background: linear-gradient(to bottom, #b1dbe7 0%, #a2f3cd 100%);
 }
 
 #root {
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  background: linear-gradient(to bottom, #b1dbe7 0%, #a2f3cd 100%);
+}
+
+.modalImage {
+width: 100%;
+margin-bottom: 3vw;
+}
+
+.modal-body {
+  text-align: center;
+  font-size: 20px;
+  background-color: beige;
+}
+
+.modal-header {
+  background-color:aquamarine
 }

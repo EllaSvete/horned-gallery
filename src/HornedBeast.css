@@ -2,7 +2,10 @@ article {
   border: 3px solid gray;
   padding: 1vw;
   margin-bottom: 1vw;
-  width: 16%;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 article img {
@@ -15,6 +18,8 @@ article p {
   margin: auto;
   display: inline-block;
   margin-bottom: .5rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 article p:last-of-type {
@@ -25,4 +30,15 @@ article p:last-of-type {
 .article-button {
   margin: .2rem 1vw;
 }
+
+h2 {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+img {
+  border-radius: 25px;
+}
+
 

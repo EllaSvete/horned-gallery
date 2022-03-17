@@ -1,4 +1,9 @@
 h1 {
   font-size: 5vw;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  background: #b1dbe7 0%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }

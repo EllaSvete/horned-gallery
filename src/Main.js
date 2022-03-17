@@ -7,9 +7,8 @@ class Main extends React.Component {
 
   render() {
     console.log(this.props.data);
-    let beasts = [];
-    this.props.data.forEach((beast, index) => {
-      beasts.push(
+    let beasts = this.props.data.map((beast, index) => {
+      return(
         <HornedBeast
         title={beast.title}
         description={beast.description}

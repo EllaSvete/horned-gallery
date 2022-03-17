@@ -2,7 +2,8 @@ import React from 'react';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
-import Modal from 'react-bootstrap/Modal';
+import SelectedBeast from './SelectedBeast.js';
+// import {Modal} from 'react-bootstrap/Modal';
 import './App.css';
 import data from './data.json';
 
@@ -10,6 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      image_url: 'horned Beasts',
       description: 'description',
       showModal: false,
     };
@@ -19,11 +21,13 @@ class App extends React.Component {
         showModal: false,
       })
     }
-    openModal = () => {
+    openModal = (image_url, description) => {
       this.setState({
         showModal: true,
-        name: 'new value'
+        image_url: image_url,
+        description: description,
       })
+      console.log(this.state.image_url);
     }
   render() {
     return (
@@ -34,14 +38,24 @@ class App extends React.Component {
       openModal={this.openModal}
       />
       <Footer/>
-      <Modal
+      <SelectedBeast 
+      hideModal={this.hideModal}
+      showModal={this.state.showModal}
+      image_url={this.state.image_url}
+      description={this.state.description}
+      />
+      {/* <Modal
         show={this.state.showModal}
         onHide={this.hideModal}
       >
        <Modal.Header closeButton>
-        <Modal.Title>{this.state.description}</Modal.Title>
+        <Modal.Body>
+          <img class="modalImage" src = {this.state.image_url} alt = "horned beast"/>
+          <p>{this.state.description}</p>
+        </Modal.Body>
+        <Modal.Title></Modal.Title>
        </Modal.Header>
-      </Modal>
+      </Modal> */}
       </>
     )
   }

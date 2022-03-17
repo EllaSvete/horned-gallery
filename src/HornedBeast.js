@@ -15,10 +15,9 @@ class HornedBeast extends React.Component {
       });
     };
     handleShowModal = () => {
-      this.props.openModal(this.props.description);
+      this.props.openModal(this.props.image_url, this.props.description);
     }
     render() {
-      console.log(this.state);
       return (
         <article>
           <h2>{this.props.title}</h2>
