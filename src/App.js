@@ -14,6 +14,8 @@ class App extends React.Component {
       image_url: 'horned Beasts',
       description: 'description',
       showModal: false,
+      hornsShown: null,
+      allBeasts: data,
     };
     }
     hideModal = () => {
@@ -29,16 +31,37 @@ class App extends React.Component {
       })
       console.log(this.state.image_url);
     }
+    handleHornFilter = (hornsShown) => {
+      console.log(typeof hornsShown);
+      let hornFiltration = data.filter(beast => beast.horns === hornsShown);
+      console.log(hornFiltration);
+
+      this.setState({
+       allBeasts: hornFiltration
+      })
+
+      if(hornsShown === 0){
+        this.setState ({
+          allBeasts: data
+        })
+
+      }
+    }
+
   render() {
+    console.log('app.js state', this.state);
     return (
+
       <>
       <Header/>
       <Horns 
+      handleHornFilter={this.handleHornFilter}
       data={data}
       />
       <Main
-      data={data}
+      data={this.state.allBeasts}
       openModal={this.openModal}
+      horns={this.state.horns}
       />
       <Footer/>
       <SelectedBeast 

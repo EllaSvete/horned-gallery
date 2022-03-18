@@ -1,34 +1,23 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import {Form} from 'react-bootstrap';
 
 class Horns extends React.Component {
 
-constructor(props){
-  super(props)
-  this.state = {
-    horns: 0
-  }
-}
-
-
-handleSelect = () => {
-//   e.preventDefault();
-// let mySelectedBeast = e.target.value;
-// let arr = [];
-// this.props.data.map(element => {
-//   return arr.push(element.horns)
-// })
-// arr.filter((selected) => {
-//   selected = mySelectedBeast;
-//   if(arr.includes(selected)) {
-//     console.log(selected);
+// constructor(props){
+//   super(props)
+//   this.state = {
+//     horns: 0
 //   }
-// })  
-console.log('handleSelect');
-}
+// }
+
+handleHornSelection = e => {
+  console.log(typeof e.target.value);
+  const userHornSelection = parseInt(e.target.value);
+  this.props.handleHornFilter(userHornSelection)};
 
 
 render () {
+  console.log(this.props);
   return (
     <>
       <header>
@@ -36,17 +25,15 @@ render () {
       <main>
         <section>
           <header>
-            {/* <h2>{this.state.image_url}</h2> */}
-            {/* <p>{this.state.horns}</p> */}
           </header>
 
-          <Form onSelect={this.handleSelect}>
+          <Form onChange={this.handleHornSelection}>
             <Form.Group>
               <Form.Label htmlFor="numberOfHorns">How many horns
               </Form.Label>
               <Form.Select>
 
-                <option value="all">All</option>
+                <option value="0">All</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -55,7 +42,6 @@ render () {
               </Form.Select>
             </Form.Group>
           </Form>
-            <Button onClick={this.handleSelected}>Submit</Button>
         </section>
         <aside>
           <ul></ul>

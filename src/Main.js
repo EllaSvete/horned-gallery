@@ -6,7 +6,7 @@ import './Main.css';
 class Main extends React.Component {
 
   render() {
-    console.log(this.props.data);
+    console.log(this.props);
     let beasts = this.props.data.map((beast, index) => {
       return(
         <HornedBeast
@@ -21,6 +21,9 @@ class Main extends React.Component {
         />
       )
     })
+
+
+
   return (
   <main>
   {beasts}
