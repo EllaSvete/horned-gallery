@@ -3,7 +3,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast.js';
-// import {Modal} from 'react-bootstrap/Modal';
+import Horns from './Horns.js';
 import './App.css';
 import data from './data.json';
 
@@ -33,6 +33,9 @@ class App extends React.Component {
     return (
       <>
       <Header/>
+      <Horns 
+      data={data}
+      />
       <Main
       data={data}
       openModal={this.openModal}

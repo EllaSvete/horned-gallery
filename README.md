@@ -100,6 +100,8 @@ Finish time: 6:50
 
 Actual time needed to complete: 1 hr
 
+## Lab 3
+
 Number and name of feature: ___Lab 3_Feature 1____________
 
 Estimate of time needed to complete: ___3 hrs__
@@ -111,3 +113,16 @@ Finish time: __6___
 Actual time needed to complete: __2.45hrs___
 
 I worked with Liesel closely on this lab. 
+
+## Lab 4
+
+Number and name of feature: ___Feature 1____________
+
+Estimate of time needed to complete: ___3 hrs__
+
+Start time: _2:45____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
