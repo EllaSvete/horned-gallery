@@ -9,7 +9,7 @@ class HornedBeast extends React.Component {
         likes: 0,
       }
     }
-    handleLikes = () => {
+    handleLikes = () => { // arrow function helps link to specific instance
       this.setState({
         likes: this.state.likes + 1
       });
@@ -37,6 +37,7 @@ class HornedBeast extends React.Component {
           >
             Pick Me!
             </Button>
+          
         </article>
       );
     }

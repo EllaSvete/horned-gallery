@@ -3,7 +3,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast.js';
-// import {Modal} from 'react-bootstrap/Modal';
+import Horns from './Horns.js';
 import './App.css';
 import data from './data.json';
 
@@ -14,6 +14,8 @@ class App extends React.Component {
       image_url: 'horned Beasts',
       description: 'description',
       showModal: false,
+      hornsShown: null,
+      allBeasts: data,
     };
     }
     hideModal = () => {
@@ -29,13 +31,37 @@ class App extends React.Component {
       })
       console.log(this.state.image_url);
     }
+    handleHornFilter = (hornsShown) => {
+      console.log(typeof hornsShown);
+      let hornFiltration = data.filter(beast => beast.horns === hornsShown);
+      console.log(hornFiltration);
+
+      this.setState({
+       allBeasts: hornFiltration
+      })
+
+      if(hornsShown === 0){
+        this.setState ({
+          allBeasts: data
+        })
+
+      }
+    }
+
   render() {
+    console.log('app.js state', this.state);
     return (
+
       <>
       <Header/>
-      <Main
+      <Horns 
+      handleHornFilter={this.handleHornFilter}
       data={data}
+      />
+      <Main
+      data={this.state.allBeasts}
       openModal={this.openModal}
+      horns={this.state.horns}
       />
       <Footer/>
       <SelectedBeast 

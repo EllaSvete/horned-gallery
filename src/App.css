@@ -59,3 +59,19 @@ margin-bottom: 3vw;
 .modal-header {
   background-color:aquamarine
 }
+
+.form-select {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-label {
+  text-align: center;
+  color:orangered
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
