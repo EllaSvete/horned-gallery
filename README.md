@@ -122,7 +122,9 @@ Estimate of time needed to complete: ___3 hrs__
 
 Start time: _2:45____
 
-Finish time: _____
+Finish time: ___7:30__
 
-Actual time needed to complete: _____
+Actual time needed to complete: __4.5hrs___
+
+Michael Maker and I worked on this code together.
 
